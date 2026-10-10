@@ -89,3 +89,18 @@ The rebuilt posts with the reference grid's background finish (`source/embroider
   * `grid_with_reference.jpg`: 01–03 above 04–06, as on the profile.
   * `compare_POST_0X.jpg`: before | after.
   * `work/rebuild/crops_refbg_POST_0X.png`: 100% crops.
+
+## Posts 01–03 with the striped background of posts 04–06 (`export/posts01-03_striped_1080x1350/`)
+The direction is 04–06 → 01–03. Posts 01–03 keep navy–beige–navy; posts 04–06 (`export/rebuild_1080x1350/`) are unchanged in beige–navy–beige.
+
+* **Source:** the only copy of posts 01–03 is the grid `source/embroidery_reference_posts01-03.webp` (667 × 888 per post). It is never overwritten.
+* **Script:** `tools/posts0103/compose0103.py`.
+  * It splits each panel against its plain old background into a foreground matte (photos, patches, type, dashes, logos; solid prints filled) and a shade layer (the design's own shadows).
+  * It renders the 04–06 striped background (`tools/rebuild/compose.py`: hairlines, website world, site grain) at 1080 × 1350 for each post's colour.
+  * It recombines: background × shade + foreground.
+  * The foreground is upscaled 1.52× with Lanczos, plus a light 35% unsharp mask. No AI and no invented detail.
+* **Outputs:**
+  * `POST_01–03.png`
+  * `compare_POST_0X.jpg` (original | new)
+  * `profile_grid_01-06.jpg`
+  * The mattes and shade layers are in `work/posts0103/`.
