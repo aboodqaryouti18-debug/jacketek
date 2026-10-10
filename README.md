@@ -125,3 +125,16 @@ Inputs (untouched): `export/posts01-03_striped_1080x1350/` and `export/rebuild_1
   * `profile_grid_preview.jpg`
   * `six_posts_full.jpg`
   * `boundary_check.png` (every crossing, 2× zoom)
+
+### v2: background treatment matched to the reference (`export/six_posts_thread_v2/`)
+The style is taken from `source/reference_dots_thread.jpg`; the artwork is the same latest six posts, with inputs untouched.
+
+* **Dots:** sparser and slightly more present, as in the reference: every 72 px, 1.9 px radius. Cream at 30% on navy, navy at 24% on beige.
+* **Thread:** longer dashes (22 / 13 px), 3 px wide.
+* **Path** (`tools/thread/route.py`):
+  * Broad curves, with no hairpin and no peaked crossings.
+  * Two round loops: one in 01, and one in 03 below the THANKS sticker.
+  * It passes behind the 02 polaroids and the among-us sticker, and runs down 06's right margin.
+* **Content:** 0 content pixels changed in every post (`report.json`).
+* **Check:** `boundary_check.png` shows every crossing at 2× zoom.
+* The first version, `export/six_posts_dots_thread/`, is kept as it was.

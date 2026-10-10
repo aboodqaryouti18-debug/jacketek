@@ -8,7 +8,7 @@
 Both are applied to background pixels only (work/thread/POST_0X_fg.png = content): the
 thread passes behind prints, stickers and type, never over them.
 Inputs : export/posts01-03_striped_1080x1350, export/rebuild_1080x1350 (untouched)
-Output : export/six_posts_dots_thread/POST_0X.png + profile grid + layers"""
+Output : export/six_posts_thread_v2/POST_0X.png + profile grid + layers"""
 import json, sys
 from pathlib import Path
 import cv2, numpy as np
@@ -16,11 +16,14 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools/thread"))
 import layout as L
 from masks import FINAL
-W = ROOT / "work/thread"; OUT = ROOT / "export/six_posts_dots_thread"
-DOT_STEP, DOT_R = 24.0, 1.45
-DOT_GAIN = {"navy": 1.45, "beige": 0.92}
+W = ROOT / "work/thread"; OUT = ROOT / "export/six_posts_thread_v2"
+# measured on the reference (source/reference_dots_thread.jpg, scaled to post px):
+# a sparse dot grid every ~72 px, small dots; long dashes on broad curves
+DOT_STEP, DOT_R = 72.0, 1.9
+# tone-on-tone, palette colours only: cream at 30% on navy, navy at 24% on beige (small dots: a subtle grid overall)
+DOT_MIX = {"navy": ((0xFC, 0xF0, 0xD6), 0.30), "beige": ((0x00, 0x30, 0x49), 0.24)}
 THREAD = {"navy": (0xFC, 0xF0, 0xD6), "beige": (0x00, 0x30, 0x49)}
-DASH_ON, DASH_OFF, WIDTH_X3, OPACITY = 13.0, 9.0, 7, 0.92     # width 7 px at 3x = 2.3 px
+DASH_ON, DASH_OFF, WIDTH_X3, OPACITY = 22.0, 13.0, 9, 0.92    # width 9 px at 3x = 3 px
 SSX = 3
 
 def dots_alpha(post):
@@ -59,7 +62,9 @@ if __name__ == "__main__":
         strict = (fg < 0.3).astype(np.float32)        # content pixels stay bit-identical
         bgw *= strict; bgw_t *= strict
         da = dots_alpha(post) * bgw
-        out = img * (1 + (DOT_GAIN[style] - 1) * da[..., None])
+        dc, dk = DOT_MIX[style]
+        dw = (da * dk)[..., None]
+        out = img * (1 - dw) + np.float32(dc) * dw
         ta = thread_alpha(post, P, s) * bgw_t * OPACITY
         out = out * (1 - ta[..., None]) + np.float32(THREAD[style]) * ta[..., None]
         o8 = np.clip(out, 0, 255).round().astype(np.uint8)
