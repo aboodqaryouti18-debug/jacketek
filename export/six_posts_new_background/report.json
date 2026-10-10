@@ -1,0 +1,32 @@
+{
+ "POST_01": {
+  "hole_px": 140486,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": 18
+ },
+ "POST_02": {
+  "hole_px": 83473,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": 0
+ },
+ "POST_03": {
+  "hole_px": 97961,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": 18
+ },
+ "POST_04": {
+  "hole_px": 98082,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": "dash layer not composed"
+ },
+ "POST_05": {
+  "hole_px": 130579,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": "dash layer not composed"
+ },
+ "POST_06": {
+  "hole_px": 124249,
+  "unfilled_px": 0,
+  "old_dash_marks_removed": "dash layer not composed"
+ }
+}

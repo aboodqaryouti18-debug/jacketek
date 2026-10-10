@@ -159,3 +159,19 @@ The background treatment of `source/reference_dots_thread.jpg`, reproduced on th
   * `six_posts_full.png`
   * `six_posts_preview.jpg`
   * `boundary_check.png` (all 9 crossings)
+
+## Six posts on the supplied background image (`export/six_posts_new_background/`)
+`source/background_supplied.jpg` (identical to `source/reference_dots_thread.jpg`) is used directly as the background: its pixels, not a redraw. Script: `tools/newbg/replace_background.py`.
+
+* **Plate:** each of its six 4:5 panels (x 0|425|855|1280, y 0|531|1065) is resampled with Lanczos to 1080 × 1350, with no sharpening. Panel edges are post edges, so the dots and thread meet at every boundary.
+* **Holes:** the supplied image is a finished collage, so it has its own photos, type and stickers. Where those fall on this design's exposed background (2–4% of it), the plate takes the image's own background pixels from one or more dot-grid steps away (78.25 × 75.25 px). Its thread, located by the trace in `work/trace/route.json`, is never treated as content.
+* **Old backgrounds removed:** plain colour, stripes, website glow, previous dots and threads, and the old dashed guides.
+  * 04–06 are re-composed from their layers. The dash layer is not drawn; the print shadows are kept; the patches are lit as approved.
+  * 01–03 use their foreground matte, minus the dashed guides (marks chained ≥ 3, 12–24 px apart, collinear), on the plate × the design's shadow layer.
+* **Outputs:**
+  * `POST_01–06.png`
+  * `six_posts_full.png`
+  * `six_posts_preview.jpg`
+  * `compare_with_supplied.jpg`
+  * `boundary_check.png`
+  * The plates are in `work/newbg/`.
