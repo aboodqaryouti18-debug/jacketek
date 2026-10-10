@@ -1,0 +1,83 @@
+{
+ "POST_04": {
+  "patches": [
+   {
+    "patch": "whocares",
+    "kind": "standalone",
+    "centre": [
+     114,
+     607
+    ],
+    "long_side_px": 132,
+    "rotation_deg": 9.0,
+    "footprint_px": 16586,
+    "on_guarded_text_px": 0
+   },
+   {
+    "patch": "porsche",
+    "kind": "sewn",
+    "centre": [
+     203,
+     447
+    ],
+    "long_side_px": 60,
+    "rotation_deg": -4.0,
+    "footprint_px": 1343,
+    "on_guarded_text_px": 0
+   }
+  ],
+  "changed_px": 17929,
+  "changed_outside_footprint": 0,
+  "changed_on_text_px": 0
+ },
+ "POST_05": {
+  "patches": [
+   {
+    "patch": "lifeexe",
+    "kind": "standalone",
+    "centre": [
+     152,
+     180
+    ],
+    "long_side_px": 194,
+    "rotation_deg": 6.5,
+    "footprint_px": 24401,
+    "on_guarded_text_px": 0
+   }
+  ],
+  "changed_px": 23985,
+  "changed_outside_footprint": 0,
+  "changed_on_text_px": 0
+ },
+ "POST_06": {
+  "patches": [
+   {
+    "patch": "cat",
+    "kind": "standalone",
+    "centre": [
+     196,
+     61
+    ],
+    "long_side_px": 118,
+    "rotation_deg": -3.6,
+    "footprint_px": 9411,
+    "on_guarded_text_px": 0
+   },
+   {
+    "patch": "bmo",
+    "kind": "standalone",
+    "centre": [
+     118,
+     772
+    ],
+    "long_side_px": 132,
+    "rotation_deg": -8.0,
+    "footprint_px": 15788,
+    "on_guarded_text_px": 0
+   }
+  ],
+  "changed_px": 25171,
+  "changed_outside_footprint": 0,
+  "changed_on_text_px": 0
+ }
+}

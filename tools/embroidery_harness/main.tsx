@@ -20,9 +20,17 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { CanvasTexture, NeutralToneMapping } from "three";
 import StudioLighting from "@/three/stage/StudioLighting";
 import EmbroideryDecal from "@/three/jacket/EmbroideryDecal";
-import { createLetteringEmbroidery, type EmbroideryMaps } from "@/three/embroidery/embroideryMaps";
+import { createImageEmbroidery, createLetteringEmbroidery, type EmbroideryMaps } from "@/three/embroidery/embroideryMaps";
 
 type Job = {
+  /**
+   * "lettering": maskUrl is a coverage mask, sewn in threadHex (createLetteringEmbroidery).
+   * "image": maskUrl is an RGBA artwork, sewn as is (createImageEmbroidery, the
+   * site's uploaded-image path: the colour map is the image's own pixels).
+   */
+  kind?: "lettering" | "image";
+  /** "image" only: sew the shape in threadHex (the site's one-thread option). */
+  singleThread?: boolean;
   maskUrl: string;
   strokePx: number;
   threadHex: string;
@@ -126,7 +134,10 @@ function App() {
     loadCanvas(job.maskUrl).then((mask) => {
       // Exactly the site's lettering path (EmbroideryLayer.tsx → createLetteringEmbroidery).
       if (!live) return;
-      const maps = createLetteringEmbroidery(mask, job.threadHex, job.strokePx);
+      const maps =
+        job.kind === "image"
+          ? createImageEmbroidery(mask, job.singleThread ? job.threadHex : null)
+          : createLetteringEmbroidery(mask, job.threadHex, job.strokePx);
       const layer = job.layer ?? "both";
       if (layer === "thread") maps.shadowMap = emptyTexture(); // black alphaMap = no shadow
       if (layer === "shadow") maps.map = emptyTexture(); // transparent colour map = no thread
@@ -147,7 +158,7 @@ function App() {
   return (
     <div style={{ width: job.width, height: job.height }}>
       <Canvas
-        key={job.maskUrl.length + job.threadHex + job.width + (job.layer ?? "both")}
+        key={job.maskUrl.length + job.threadHex + job.width + (job.layer ?? "both") + (job.kind ?? "lettering") + (job.singleThread ? "1" : "0")}
         orthographic
         dpr={1}
         frameloop="always"

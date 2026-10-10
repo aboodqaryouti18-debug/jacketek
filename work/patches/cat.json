@@ -1,0 +1,11 @@
+{
+ "name": "cat",
+ "src": "19.jpg",
+ "size": [
+  824,
+  518
+ ],
+ "border_px": 18,
+ "thread": "#E9E6DF",
+ "mode": "diecut"
+}

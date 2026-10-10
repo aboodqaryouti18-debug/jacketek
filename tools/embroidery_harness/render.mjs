@@ -1,7 +1,7 @@
 // Drives the harness page (vite dev server on :5199) in headless Chromium.
 //   node render.mjs tasks.json
 // tasks: [{ "op": "mask", "text", "px", "pad", "out" }
-//         { "op": "embroider", "mask", "strokePx", "threadHex", "outDir" }]
+//         { "op": "embroider", "mask", "strokePx", "threadHex", "outDir", "kind"?: "image", "singleThread"?, "layer"? }]
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
@@ -27,7 +27,7 @@ for (const t of tasks) {
     const { width, height } = { width: img.readUInt32BE(16), height: img.readUInt32BE(20) };
     const maskUrl = "data:image/png;base64," + img.toString("base64");
     await page.setViewportSize({ width: Math.max(width, 800), height: Math.max(height, 600) });
-    const r = await page.evaluate((o) => window.renderEmbroidery(o), { maskUrl, strokePx: t.strokePx, threadHex: t.threadHex, layer: t.layer, width, height });
+    const r = await page.evaluate((o) => window.renderEmbroidery(o), { kind: t.kind, singleThread: t.singleThread, maskUrl, strokePx: t.strokePx, threadHex: t.threadHex || "#FFFFFF", layer: t.layer, width, height });
     mkdirSync(t.outDir, { recursive: true });
     const tag = t.layer ? `_${t.layer}` : "";
     for (const [k, v] of Object.entries(r)) save(`${t.outDir}/${k === "render" ? "render" + tag : k}.png`, v);

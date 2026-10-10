@@ -1,0 +1,11 @@
+{
+ "name": "whocares",
+ "src": "18.jpg",
+ "size": [
+  836,
+  847
+ ],
+ "border_px": 30,
+ "thread": "#282C30",
+ "mode": "flood"
+}

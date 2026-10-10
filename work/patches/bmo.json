@@ -1,0 +1,11 @@
+{
+ "name": "bmo",
+ "src": "16.jpg",
+ "size": [
+  839,
+  787
+ ],
+ "border_px": 26,
+ "thread": "#E9E6DF",
+ "mode": "diecut"
+}
