@@ -1,0 +1,35 @@
+{
+  "POST_04": {
+    "word": "ذكرياتك",
+    "render_mean_luminance": 0.3454,
+    "thread_mean_rgb": [
+      189.8,
+      18.2,
+      31.4
+    ],
+    "changed_pixels": 21519,
+    "changed_far_from_word": 0
+  },
+  "POST_05": {
+    "word": "تفصيلة",
+    "render_mean_luminance": 0.3455,
+    "thread_mean_rgb": [
+      189.8,
+      17.9,
+      30.9
+    ],
+    "changed_pixels": 8804,
+    "changed_far_from_word": 0
+  },
+  "POST_06": {
+    "word": "معنى",
+    "render_mean_luminance": 0.3591,
+    "thread_mean_rgb": [
+      188.4,
+      17.9,
+      30.8
+    ],
+    "changed_pixels": 8979,
+    "changed_far_from_word": 0
+  }
+}

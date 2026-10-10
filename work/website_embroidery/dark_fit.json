@@ -1,0 +1,41 @@
+[
+  {
+    "name": "POST_04",
+    "sx": 0.18411578358215214,
+    "sy": 0.18537226079036628,
+    "tx": 163.08257353985996,
+    "ty": 731.4962068433198,
+    "aspect_ratio_sx_over_sy": 0.9932218703982088,
+    "iou": 0.9863469863469864,
+    "mean_abs_alpha_diff": 0.008891820673702353,
+    "pixels_disagree": 123,
+    "disagree_away_from_edges": 0,
+    "word_pixels": 8948
+  },
+  {
+    "name": "POST_05",
+    "sx": 0.13547402366117126,
+    "sy": 0.13589947929802668,
+    "tx": 308.62409268775167,
+    "ty": 157.48793256900427,
+    "aspect_ratio_sx_over_sy": 0.9968693357836759,
+    "iou": 0.9735267034990792,
+    "mean_abs_alpha_diff": 0.01546845023621419,
+    "pixels_disagree": 115,
+    "disagree_away_from_edges": 0,
+    "word_pixels": 4264
+  },
+  {
+    "name": "POST_06",
+    "sx": 0.16492402610801588,
+    "sy": 0.16412627484663656,
+    "tx": 363.80388761272206,
+    "ty": 759.8090136728904,
+    "aspect_ratio_sx_over_sy": 1.004860594454634,
+    "iou": 0.9879162191192267,
+    "mean_abs_alpha_diff": 0.00937938151596977,
+    "pixels_disagree": 45,
+    "disagree_away_from_edges": 0,
+    "word_pixels": 3703
+  }
+]
