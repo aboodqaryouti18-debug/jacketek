@@ -338,13 +338,23 @@ def red_word(post, img):
     return over(img, t_rgb, t_a)
 
 
+# Placements that differ from the approved ones in tools/patches/composite.py.
+# POST_04: the car patch moved off the sleeve onto the big print's top-left corner,
+# a standalone patch overlapping the frame edge like the clock on its bottom-left
+# corner (the clock stays exactly as approved).
+PATCH_PLACE = {
+    "POST_04": [("whocares", (114, 607), 132, 9.0, "standalone"),
+                ("porsche", (72, 228), 100, -6.0, "standalone")],
+}
+
+
 def patches_layer(post, img):
     """the approved patch placements (tools/patches/composite.py, panel px), rendered from the
     baked embroidered patches (work/patches/baked, ~820 px) straight to the output size"""
     sys.path.insert(0, str(ROOT / "tools/patches"))
     import composite as pc
     LUMW = np.float32([0.2126, 0.7152, 0.0722])
-    for n, c, D, rot, kind in pc.PLACE[post]:
+    for n, c, D, rot, kind in PATCH_PLACE.get(post, pc.PLACE[post]):
         t, sh = pc.load(n)
         M = to_out(pc.matrix(t[..., 3], c, D, rot), post, SS)
         remap = None
