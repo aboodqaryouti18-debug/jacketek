@@ -40,11 +40,14 @@ for post in ("POST_04", "POST_05", "POST_06"):
     # include the frames' anti-aliased rim, and keep the mask edge soft (no stair-steps)
     prints = cv2.GaussianBlur(prints, (0, 0), 0.7)
     # text / red words / graphics = non-background pixels that are not part of a print: protected
-    text = ((bg < 0.5) & (prints < 0.5)).astype(np.uint8)
-    n2, lab2, st2, _ = cv2.connectedComponentsWithStats(text)
-    for i in range(1, n2):                     # existing soft shadows next to prints are background, not text
-        if st2[i, cv2.CC_STAT_AREA] > 4000: text[lab2 == i] = 0
-    text = cv2.GaussianBlur(cv2.dilate(text, np.ones((3, 3), np.uint8)).astype(np.float32), (0, 0), 0.6)
+    # text / red words / graphics: pixels whose HUE differs from the background (shadows only
+    # change lightness, so they stay background); every such pixel outside the prints is protected
+    ref = {"beige": (253, 239, 212), "navy": (0, 48, 72)}[STYLE[post]]
+    a = rgb.astype(np.float32); c1, c2 = a[..., 0] - a[..., 2], a[..., 1] - a[..., 2]
+    chroma = np.sqrt((c1 - (ref[0] - ref[2])) ** 2 + (c2 - (ref[1] - ref[2])) ** 2)
+    lumd = np.abs(a.mean(2) - sum(ref) / 3)
+    text = (((chroma > 14) | (lumd > 70)) & (prints < 0.5)).astype(np.uint8)
+    text = cv2.dilate(text, np.ones((5, 5), np.uint8)).astype(np.float32)
     cfg = SH[STYLE[post]]
     drop = cv2.GaussianBlur(shift(prints, DROP_OFF), (0, 0), DROP_SIG)
     contact = cv2.GaussianBlur(shift(prints, CON_OFF), (0, 0), CON_SIG)
