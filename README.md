@@ -104,3 +104,24 @@ The direction is 04–06 → 01–03. Posts 01–03 keep navy–beige–navy; po
   * `compare_POST_0X.jpg` (original | new)
   * `profile_grid_01-06.jpg`
   * The mattes and shade layers are in `work/posts0103/`.
+
+## Dotted grid + one connecting thread across all six posts (`export/six_posts_dots_thread/`)
+Inputs (untouched): `export/posts01-03_striped_1080x1350/` and `export/rebuild_1080x1350/`. The six posts are treated as one profile grid (top row 01 02 03, bottom row 04 05 06), with the centre 3:4 of each post visible (`tools/thread/layout.py`).
+
+* `tools/thread/masks.py`: builds each post's content mask, written to `work/thread/POST_0X_fg.png`.
+  * 01–03: the compose0103 foreground matte.
+  * 04–06: the final post versus its own background render.
+* `tools/thread/route.py`: the single thread, planned on the whole grid.
+  * Order: 01 → 04 → 05 → 02 → 03 → 06.
+  * A Catmull-Rom spline through open background, with three round loops (01, 05, 03).
+  * In 02 it passes behind the polaroids.
+  * Output: `work/thread/path.json`.
+* `tools/thread/apply.py`: adds two background-only layers.
+  * **Dots:** one global grid (24 px spacing, 1.45 px radius, continuous across every boundary). Tone-on-tone: navy ×1.45, beige ×0.92.
+  * **Thread:** dashed 13 / 9 px by its own arclength, about 2.3 px wide. Cream #FCF0D6 on navy posts, navy #003049 on beige posts, so the colour switches exactly at post boundaries.
+  * Content pixels are left bit-identical (`report.json`: `changed_on_content_px` is 0 for every post).
+* **Review:**
+  * `profile_grid.png` (full-size grid)
+  * `profile_grid_preview.jpg`
+  * `six_posts_full.jpg`
+  * `boundary_check.png` (every crossing, 2× zoom)
