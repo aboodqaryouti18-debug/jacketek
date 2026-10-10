@@ -120,7 +120,7 @@ def design_shadow(P, style):
            (1 - p["k2"] * blur_shift(P, p["dx2"] * S, p["dy2"] * S, p["s2"] * S))
 
 
-def enhance_shadow(P, post):
+def enhance_shadow(P, post, sweep_on=True):
     """tools/replace_photos/enhance.py (drop + contact shadow, gentle sweep), in panel units."""
     cfg = {"beige": dict(drop=0.20, contact=0.22, grad=0.035), "navy": dict(drop=0.38, contact=0.30, grad=0.05)}[STYLE[post]]
     L = np.array([0.6, 1.0]); L = L / np.linalg.norm(L)
@@ -128,7 +128,7 @@ def enhance_shadow(P, post):
     contact = blur_shift(P, 2.0 * L[0] * S, 2.0 * L[1] * S, 2.2 * S)
     xp, yp = panel_coords(post)
     t = ((xp / PANEL_W[post]) * L[0] + (yp / 888) * L[1]) / L.sum()
-    sweep = 1 + cfg["grad"] * (0.5 - t) * 2 * 0.5
+    sweep = 1 + cfg["grad"] * (0.5 - t) * 2 * 0.5 if sweep_on else 1
     return (1 - cfg["drop"] * drop) * (1 - cfg["contact"] * contact) * sweep
 
 
@@ -193,6 +193,47 @@ def background(post, grain_tile):
     bg *= (design_shadow(P, style) * lines_gain(post) * enhance_shadow(P, post))[..., None]
     w, mid = world(post, grain_tile)
     return np.clip(bg + (w - mid), 0, 255), P
+
+
+# The background of the reference grid (posts 01-03): see tools/rebuild/ref_background_fit.py
+BG_MODE = "website"   # "website" (approved rebuild) or "reference" (posts 01-03 finish)
+REF_GRAIN = 0.45      # the reference's background is near-flat: the site grain at under half strength
+
+
+def reference_light(post):
+    """the reference beige's light (elliptical + floor fall-off) in panel coordinates; navy: flat"""
+    R = J("work/rebuild/ref_background.json")
+    if STYLE[post] == "navy":
+        return np.ones((H_OUT, W_OUT), np.float32), np.array(R["navy"]["colour"], np.float32)
+    q = R["beige"]["params"]
+    xp, yp = panel_coords(post)
+    u = (xp + 0.5) / PANEL_W[post]; v = (yp + 0.5) / 888
+    f = np.clip((v - q["floor_from"]) / (1 - q["floor_from"]), 0, 1)
+    g = (1 - q["a_u"] * ((u - 0.5) / 0.5) ** 2 - q["a_v"] * ((v - q["v_centre"]) / 0.5) ** 2) * (1 - q["floor"] * f * f)
+    return g.astype(np.float32), np.array(R["beige"]["peak_colour"], np.float32)
+
+
+def grain_only(img, grain_tile, strength):
+    """the site's textile grain (soft-light), on its own, at a given strength"""
+    k = PANEL_W["POST_04"] * S / wb.SITE_VIEW_W
+    g = cv2.resize(grain_tile, (max(8, round(240 * k)),) * 2, interpolation=cv2.INTER_AREA)
+    g = np.tile(g, (H_OUT // g.shape[0] + 1, W_OUT // g.shape[1] + 1, 1))[:H_OUT, :W_OUT]
+    gv, ga = g[..., 0] / 255, g[..., 3] / 255 * strength
+    b = img / 255; s_ = gv[..., None]
+    soft = np.where(s_ <= 0.5, b - (1 - 2 * s_) * b * (1 - b), b + (2 * s_ - 1) * (np.where(b <= 0.25, ((16 * b - 12) * b + 4) * b, np.sqrt(b)) - b))
+    return (b * (1 - ga[..., None]) + soft * ga[..., None]) * 255
+
+
+def background_reference(post, grain_tile):
+    """posts 01-03's background on 04-06, each post keeping its own colour world:
+    the reference's beige / navy and its light, the faint hairlines, the print shadows,
+    a near-flat grain. (The website world's glow, window light and vignette are left out.)"""
+    style = STYLE[post]
+    P = prints_union(post)
+    gain, colour = reference_light(post)
+    bg = np.ones((H_OUT, W_OUT, 3), np.float32) * colour
+    bg *= (gain * design_shadow(P, style) * lines_gain(post) * enhance_shadow(P, post, sweep_on=False))[..., None]
+    return np.clip(grain_only(bg, grain_tile, REF_GRAIN), 0, 255), P
 
 
 # ---------------------------------------------------------------- layers (premultiplied RGBA, output res)
@@ -348,7 +389,7 @@ PATCH_PLACE = {
 }
 
 
-def patches_layer(post, img):
+def patches_layer(post, img, light_img=None):
     """the approved patch placements (tools/patches/composite.py, panel px), rendered from the
     baked embroidered patches (work/patches/baked, ~820 px) straight to the output size"""
     sys.path.insert(0, str(ROOT / "tools/patches"))
@@ -370,7 +411,7 @@ def patches_layer(post, img):
             if remap is not None: big = cv2.remap(big, remap[0], remap[1], cv2.INTER_LINEAR, borderValue=0)
             return down(big)
         a = wp(t[..., 3]); col = wp(t[..., :3] * t[..., 3:4]) * 255; shw = wp(sh)
-        lum = img @ LUMW
+        lum = (img if light_img is None else light_img) @ LUMW
         if kind == "standalone":
             lf = pc.LIFT[STYLE[post]]
             Mo = to_out(pc.matrix(t[..., 3], (c[0] + lf["off"][0], c[1] + lf["off"][1]), D, rot), post, SS)
@@ -392,19 +433,29 @@ def patches_layer(post, img):
 
 def build(post):
     grain = cv2.cvtColor(cv2.imread("/home/user/jacketportable/public/assets/texture/grain-soft-240.png", cv2.IMREAD_UNCHANGED), cv2.COLOR_BGRA2RGBA).astype(np.float32)
-    img, P = background(post, grain)
+    img, P = (background_reference if BG_MODE == "reference" else background)(post, grain)
     d_rgb, d_a = dashes_layer(post)
     img = over(img, d_rgb, d_a)
     img = prints_layers(post, img)
     img = text_layers(post, img)
-    img = patches_layer(post, img)
+    light_img = None
+    if BG_MODE == "reference":
+        # the patches keep their approved look exactly: their tone is read from the
+        # approved (website-background) composite, not from the new background
+        w, _ = background(post, grain)
+        light_img = text_layers(post, prints_layers(post, over(w, d_rgb, d_a)))
+    img = patches_layer(post, img, light_img)
     return img
 
 
 if __name__ == "__main__":
-    posts = sys.argv[1:] or ["POST_04", "POST_05", "POST_06"]
-    (WR / "stage").mkdir(parents=True, exist_ok=True)
+    args = sys.argv[1:]
+    if "--reference-bg" in args:
+        BG_MODE = "reference"; args.remove("--reference-bg")
+    posts = args or ["POST_04", "POST_05", "POST_06"]
+    stage = WR / ("stage_reference_bg" if BG_MODE == "reference" else "stage")
+    stage.mkdir(parents=True, exist_ok=True)
     for post in posts:
         img = build(post)
-        cv2.imwrite(str(WR / "stage" / f"{post}.png"), cv2.cvtColor(np.clip(img, 0, 255).round().astype(np.uint8), cv2.COLOR_RGB2BGR))
+        cv2.imwrite(str(stage / f"{post}.png"), cv2.cvtColor(np.clip(img, 0, 255).round().astype(np.uint8), cv2.COLOR_RGB2BGR))
         print(post, "ok")

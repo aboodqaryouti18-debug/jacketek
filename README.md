@@ -76,3 +76,16 @@ This replaces the earlier `tools/embroider_words.py` look. It uses the JACKETEK 
   * The live site's panels have moved by a few px since the cards were made, so some card rows sit 1–2 px off.
   * The card 1 capture is blanked below the swatches, where the original card is empty.
   * The hard shadow step under the frames in the approved posts (from an over-wide text guard) is now a continuous shadow.
+
+## Posts 01–03 background on posts 04–06 (`export/reference_bg_1080x1350/`)
+The rebuilt posts with the reference grid's background finish (`source/embroidery_reference_posts01-03.webp`). They keep their own colour order on purpose: 01–03 are navy–beige–navy, 04–06 are **beige–navy–beige**.
+
+* **Measurement** (`tools/rebuild/ref_background_fit.py` → `work/rebuild/ref_background.json`):
+  * Reference navy: flat (0, 46, 71); its light varies by under 1%.
+  * Reference beige: peak (254, 242, 217), with an elliptical fall-off (top corners 94%) and a floor fall-off from 68% of the height (bottom corners 84%). Fitted to 1.5 levels RMS on clean background pixels.
+* **Render:** `python3 tools/rebuild/compose.py --reference-bg` → `work/rebuild/stage_reference_bg/`. This swaps the website world (glow, window light, vignette) for the reference colour and light. It keeps the faint hairlines, the print shadows and the dashed guides, and adds the site grain at 45% strength.
+* **Unchanged:** photos, cards, type, red-word embroidery and patches are the same layers as `export/rebuild_1080x1350/`. The patches read their light from the approved composite, so they are identical too; inside every photo and card, 0 pixels changed.
+* **Review:** `python3 tools/rebuild/review_reference_bg.py`.
+  * `grid_with_reference.jpg`: 01–03 above 04–06, as on the profile.
+  * `compare_POST_0X.jpg`: before | after.
+  * `work/rebuild/crops_refbg_POST_0X.png`: 100% crops.
