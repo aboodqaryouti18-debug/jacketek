@@ -54,3 +54,25 @@ This replaces the earlier `tools/embroider_words.py` look. It uses the JACKETEK 
 * **Run:** `cd tools/embroidery_harness && node_modules/.bin/vite --config vite.config.mjs`, then `python3 tools/website_embroidery/run_pipeline.py`. `node_modules` is a symlink to `jacketportable/node_modules` after `npm ci` there.
 * **Outputs:** `export/website_embroidery/` (three posts, the grid, the comparison sheet, `report.json`). Intermediates are in `work/website_embroidery/` (masks, the site's five maps per word, renders, post-resolution layers, live-site captures).
 * **Live-site comparison:** `tools/website_embroidery/capture_site.mjs` captures the real configurator (Red thread, Lalezar, left chest).
+
+## Rebuilt posts at 1080×1350 (POST 04 / 05 / 06)
+`export/rebuild_1080x1350/POST_0X.png`: the approved posts (`export/patches/`, unchanged) rebuilt from their separate elements at the final Instagram size. No flattened post is upscaled or sharpened.
+
+* **Geometry.** The grid preview shows the centre 3:4 of each 4:5 post. Panel px map to post px as `x' = 33 + 1.5203·x`, `y' = 1.5203·y`. The 33 px side strips are background; the hairlines and dashed guides continue into them.
+* **Measured on the original grid** (`tools/rebuild/`):
+  * `fit_text.py`: every text run re-set in DARK ExtraBold by the browser (`text_runs.py` holds the exact strings) and fitted.
+  * `measure_frames.py` + `refine_windows.py`: every print as a quadrilateral, both the outer frame and the photo window.
+  * `measure_dashes.py` + `dash_model.py`: the dashed guides as arcs, period 17.75 px, dash 9.1 × 1.8 px. Stretches the design knocks out behind the type stay hidden.
+  * `shadow_fit.py`: the design's own print shadows, a two-term model per colour world.
+* **Sources:**
+  * The 2000 px jacket photos (`source/new_photos`) and the JK chest render.
+  * The two POST_05 configurator cards, re-captured from the live site in Arabic at 3× (`capture_cards.mjs`, `cards_fit.py`): Body step with leather; Embroidery step with 4 zones (JK / 27 / 09 / 09, cut out of the renders by `thumb_cutouts.py`).
+  * The website 3D embroidery renders of the red words (6×).
+  * The baked embroidered patches (~4×).
+* **Background:** `compose.py` re-runs the hairlines, the earlier print shadows and the website world (site grain tile at ~1:1) directly at 1080×1350.
+* **Run:** start the site (`npx vite` in jacketportable, port 5173) and the embroidery harness (port 5199). Then run `capture_cards.mjs work/rebuild/site`, `cards_fit.py`, `fit_text.py`, `measure_frames.py`, `refine_windows.py`, `dash_model.py`, `shadow_fit.py`, then `compose.py`, `review.py` and `verify_text.py`.
+* **Review:** `compare_POST_0X.jpg` shows the approved post (enlarged) next to the rebuild. `work/rebuild/crops_POST_0X.png` holds 100% crops. `report_text.json` holds the text overlap per run.
+* **Known differences from the approved posts:**
+  * The live site's panels have moved by a few px since the cards were made, so some card rows sit 1–2 px off.
+  * The card 1 capture is blanked below the swatches, where the original card is empty.
+  * The hard shadow step under the frames in the approved posts (from an over-wide text guard) is now a continuous shadow.

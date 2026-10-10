@@ -1,0 +1,111 @@
+{
+ "POST_04": [
+  {
+   "kind": "arc",
+   "cx": 1153.1889187732259,
+   "cy": -1293.3207707650133,
+   "r": 1732.288051155934,
+   "th0": 2.296726149880878,
+   "sign": -1.0,
+   "s0": -0.01321933065658046,
+   "period": 17.74508007839235,
+   "s_first": -0.01321933065658046,
+   "s_last": 372.63346231558273,
+   "resid_max": 0.24721582865662128,
+   "hidden_k": [],
+   "id": "arc_top_left",
+   "extend_start": true,
+   "extend_end": false
+  },
+  {
+   "id": "to_05",
+   "kind": "line",
+   "anchor": [
+    683.4,
+    374.2
+   ],
+   "angle": 19.5,
+   "extend_start": false,
+   "extend_end": true,
+   "from_x": 650,
+   "to_x": null,
+   "period": 17.75657034862862
+  }
+ ],
+ "POST_05": [
+  {
+   "id": "from_04",
+   "kind": "line",
+   "anchor": [
+    16.4,
+    374.2
+   ],
+   "angle": 19.5,
+   "extend_start": true,
+   "extend_end": false,
+   "from_x": null,
+   "to_x": 30,
+   "period": 17.75657034862862
+  },
+  {
+   "id": "to_06",
+   "kind": "line",
+   "anchor": [
+    671.3,
+    547.4
+   ],
+   "angle": 16.6,
+   "extend_start": false,
+   "extend_end": true,
+   "from_x": 652,
+   "to_x": null,
+   "period": 17.75657034862862
+  }
+ ],
+ "POST_06": [
+  {
+   "id": "from_05",
+   "kind": "line",
+   "anchor": [
+    5.3,
+    547.4
+   ],
+   "angle": 16.6,
+   "extend_start": true,
+   "extend_end": false,
+   "from_x": null,
+   "to_x": 12,
+   "period": 17.75657034862862
+  },
+  {
+   "kind": "arc",
+   "cx": 59.64363228736002,
+   "cy": 1410.0832804185802,
+   "r": 798.0918925358559,
+   "th0": -1.2108966182353047,
+   "sign": 1.0,
+   "s0": -0.09019754831497065,
+   "period": 17.76806061886489,
+   "s_first": -0.09019754831497065,
+   "s_last": 390.80713606671264,
+   "resid_max": 0.39046411058791364,
+   "hidden_k": [
+    [
+     2,
+     8
+    ],
+    [
+     12,
+     19
+    ]
+   ],
+   "id": "arc_text",
+   "extend_start": false,
+   "extend_end": true
+  }
+ ],
+ "dash": {
+  "length": 9.1,
+  "width": 1.8
+ }
+}

@@ -60,7 +60,7 @@ def matrix(art_alpha, centre, D, rot):
 
 def warp(img, M, shape, remap=None):
     MK = M.copy() * K
-    big = cv2.warpAffine(img, MK, (shape[1] * K, shape[0] * K), flags=cv2.INTER_AREA if False else cv2.INTER_LINEAR, borderValue=0)
+    big = cv2.warpAffine(img, MK, (shape[1] * K, shape[0] * K), flags=cv2.INTER_LINEAR, borderValue=0)
     if remap is not None:
         big = cv2.remap(big, remap[0], remap[1], cv2.INTER_LINEAR, borderValue=0)
     return cv2.resize(big, (shape[1], shape[0]), interpolation=cv2.INTER_AREA)
