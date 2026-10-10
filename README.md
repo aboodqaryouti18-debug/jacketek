@@ -6,6 +6,7 @@ post (it restarts per post) and fading out toward all four edges.
 
 * Beige posts (04, 06): soft centre shadow-depth, about −5.5% at the very centre.
 * Navy post (05): soft centre glow, about +16% at the centre.
+* Background lines are about 18% more visible in the centre of each post and unchanged at the edges (`LINE_CENTER` / `LINE_EDGE`).
 * Only brightness changes; hue and chroma stay the same, so beige, navy and red stay on brand.
 * Photos, frames, embroidery and type are masked out, so only the background changes.
 
@@ -19,7 +20,7 @@ post (it restarts per post) and fading out toward all four edges.
 | `tools/background_treatment.py` | Generator script. All strengths are in `SETTINGS` |
 
 ## Using the layers in the source files
-Put the layers directly above each post's background layer, below the photos and type:
+The layers are 16-bit greyscale PNGs. Put them directly above each post's background layer, below the photos and type:
 
 * `*_depth_multiply.png`: blend **Multiply** (beige centre depth)
 * `*_depth_colordodge.png`: blend **Color Dodge** (navy centre glow)

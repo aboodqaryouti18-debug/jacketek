@@ -40,6 +40,14 @@ SETTINGS = {
 POST_STYLE = {"POST_04": "beige", "POST_05": "navy", "POST_06": "beige"}
 
 LINES_PER_WIDTH = 21.5   # reference: ~33 px spacing on a 709 px canvas
+# Line opacity relative to the original treatment: LINE_EDGE at the canvas
+# edges, LINE_CENTER at the centre, blended by the same soft centre mask.
+LINE_EDGE = 0.45
+LINE_CENTER = 1.18       # +18% line visibility in the centre of each post
+
+
+def line_amount(m):
+    return LINE_EDGE + (LINE_CENTER - LINE_EDGE) * m
 
 
 def smoothstep(e0, e1, x):
@@ -83,7 +91,7 @@ def gain_map(w, h, style):
     m = center_mask(w, h)
     dark, light = line_profiles(w, h)
     # lines stay present everywhere but are strongest in the atmospheric centre
-    line_amt = 0.45 + 0.55 * m
+    line_amt = line_amount(m)
     gain = (1 + cfg["depth"] * m)
     gain *= 1 - cfg["line_dark"] * dark * line_amt
     gain *= 1 + cfg["line_light"] * light * line_amt
@@ -132,19 +140,23 @@ def export_layers(style, name, w=1080, h=1350):
       *_depth_colordodge.png   blend: Color Dodge  (navy: soft centre glow)
       *_lines_multiply.png     blend: Multiply     (thin dark line cores)
       *_lines_colordodge.png   blend: Color Dodge  (faint line highlights)
-    Multiply by grey v gives gain v/255; Color Dodge by grey v gives gain
-    1/(1-v/255). Both scale brightness only, so hue never shifts."""
+    Layers are 16-bit greyscale. Multiply by grey v (0..1) gives gain v;
+    Color Dodge by grey v gives gain 1/(1-v). Both scale brightness only, so hue never shifts."""
     cfg = SETTINGS[style]
     m = center_mask(w, h)
     dark, light = line_profiles(w, h)
-    amt = 0.45 + 0.55 * m
+    amt = line_amount(m)
     d = OUT / "layers_1080x1350"
 
+    def save16(v, fname):
+        # 16-bit greyscale keeps these very faint layers free of rounding
+        Image.fromarray(np.clip(v * 65535, 0, 65535).round().astype(np.uint16)).save(d / fname)
+
     def save_mult(gain, fname):
-        Image.fromarray(np.clip(gain * 255, 0, 255).round().astype(np.uint8)).save(d / fname)
+        save16(gain, fname)
 
     def save_dodge(gain, fname):
-        Image.fromarray(np.clip((1 - 1 / gain) * 255, 0, 255).round().astype(np.uint8)).save(d / fname)
+        save16(1 - 1 / gain, fname)
 
     depth_gain = 1 + cfg["depth"] * m
     if cfg["depth"] < 0:
