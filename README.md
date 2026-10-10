@@ -29,3 +29,17 @@ The layers are 16-bit greyscale PNGs. Put them directly above each post's backgr
 
 To make the effect stronger or weaker, change layer opacity, or edit `SETTINGS` and re-run:
 `python3 tools/background_treatment.py` (needs only numpy and Pillow).
+
+## Red-word embroidery (POST 04 / 05 / 06)
+Raised red-thread satin embroidery on **only** «ذكرياتك» (04), «تفصيلة» (05) and «معنى» (06).
+The stitch style follows `source/embroidery_reference_posts01-03.webp`.
+
+* Script: `tools/embroider_words.py` (needs numpy, opencv-python-headless, Pillow).
+  Input `export/posts/POST_0X_background.png`, output `export/posts/POST_0X_embroidered.png`
+  and `export/grid/grid_preview_embroidered.png`.
+* `work/embroidery/` holds each word's masks: `mask_hard` is the letter pixels, `mask_alpha` the soft edges.
+  It also holds the stitch-direction map and a 4× close-up render of each word.
+* Settings at the top of the script: `STITCH_SLANT_DEG`, `THREAD_PITCH`, `THREAD_CONTRAST`,
+  `RELIEF`, `FRAY`, `SHADOW`. Word boxes are in `WORDS`.
+* The red full stops after the words are deliberately left flat, as in the reference.
+* `export/grid/embroidery_review_sheet.jpg` shows the reference next to before/after close-ups of each word.
