@@ -1,0 +1,26 @@
+{
+ "POST_04": {
+  "subject": [
+   0.533,
+   0.512
+  ],
+  "protected_px": 250640,
+  "protected_px_changed": 0
+ },
+ "POST_05": {
+  "subject": [
+   0.521,
+   0.616
+  ],
+  "protected_px": 259088,
+  "protected_px_changed": 0
+ },
+ "POST_06": {
+  "subject": [
+   0.46,
+   0.386
+  ],
+  "protected_px": 250885,
+  "protected_px_changed": 0
+ }
+}
