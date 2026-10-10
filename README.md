@@ -138,3 +138,24 @@ The style is taken from `source/reference_dots_thread.jpg`; the artwork is the s
 * **Content:** 0 content pixels changed in every post (`report.json`).
 * **Check:** `boundary_check.png` shows every crossing at 2× zoom.
 * The first version, `export/six_posts_dots_thread/`, is kept as it was.
+
+## Reference background, traced exactly (`export/six_posts_reference_bg/`)
+The background treatment of `source/reference_dots_thread.jpg`, reproduced on the latest original six posts. The inputs are untouched and 0 content pixels changed (`report.json`).
+
+* **Trace:**
+  * `tools/thread/trace_pieces.py` finds the reference's dash marks on background.
+  * `tools/thread/trace_route.py` covers the 15 visible stretches of its thread. Each is a coarse guide, snapped to the reference's own dashes along the normal, and mapped to full-post coordinates (each reference panel is one whole 1080 × 1350 post).
+  * Output: `work/trace/route.json`.
+  * `work/trace/route_on_reference.png` shows the trace over the reference.
+* **Measured:**
+  * Dash period 36 px (dash 22 / gap 14), line about 5 px.
+  * Dot grid 78.25 × 75.25 px, first dot at (60, 60) in every post, dot radius 2.1 px.
+* **Render:** `tools/thread/apply_reference.py`.
+  * The stretches are joined in the reference's order. Where the reference hides the thread behind content, the join is a smooth curve that is drawn only until it tucks under content in this design.
+  * Whole dashes only: a dash touching content is hidden entirely.
+  * Cream on navy, navy on beige.
+* **Review:**
+  * `compare_with_reference.jpg`
+  * `six_posts_full.png`
+  * `six_posts_preview.jpg`
+  * `boundary_check.png` (all 9 crossings)
