@@ -1,0 +1,445 @@
+{
+ "post": "05",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_prints_on_background.png",
+   "name": "shadow_prints_on_background",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 127,
+    "y": 1249,
+    "width": 3030,
+    "height": 2611
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the prints' soft drop + contact shadow on the background (black, normal blend)"
+  },
+  {
+   "order": 2,
+   "file": "02_frame_front.png",
+   "name": "frame_front",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 242,
+    "y": 1545,
+    "width": 1588,
+    "height": 1871
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 3,
+   "file": "03_photo_front.png",
+   "name": "photo_front",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 297,
+    "y": 1592,
+    "width": 1459,
+    "height": 1656
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/full_jacket_l.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 4,
+   "file": "04_shadow_card1_on_prints_below.png",
+   "name": "shadow_card1_on_prints_below",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1593,
+    "y": 1612,
+    "width": 237,
+    "height": 1059
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the card1 print's shadow where it lies on the prints under it"
+  },
+  {
+   "order": 5,
+   "file": "05_frame_card1.png",
+   "name": "frame_card1",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1698,
+    "y": 1326,
+    "width": 1311,
+    "height": 1182
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 6,
+   "file": "06_card_card1.png",
+   "name": "card_card1",
+   "type": "screenshot",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1733,
+    "y": 1362,
+    "width": 1230,
+    "height": 1026
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/rebuild/site/body_panel.png",
+   "note": "the configurator panel, live-site capture at 3x"
+  },
+  {
+   "order": 7,
+   "file": "07_shadow_card2_on_prints_below.png",
+   "name": "shadow_card2_on_prints_below",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1565,
+    "y": 2511,
+    "width": 227,
+    "height": 905
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the card2 print's shadow where it lies on the prints under it"
+  },
+  {
+   "order": 8,
+   "file": "08_frame_card2.png",
+   "name": "frame_card2",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1647,
+    "y": 2535,
+    "width": 1362,
+    "height": 1139
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 9,
+   "file": "09_card_card2.png",
+   "name": "card_card2",
+   "type": "screenshot",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1728,
+    "y": 2570,
+    "width": 1245,
+    "height": 987
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/rebuild/site/embroidery_panel.png",
+   "note": "the configurator panel, live-site capture at 3x"
+  },
+  {
+   "order": 10,
+   "file": "10_text_p5_l1.png",
+   "name": "text_p5_l1",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1840,
+    "y": 324,
+    "width": 1078,
+    "height": 292
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«إنت اختار» DARK ExtraBold, #FCF0D6"
+  },
+  {
+   "order": 11,
+   "file": "11_text_p5_kul.png",
+   "name": "text_p5_kul",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2466,
+    "y": 747,
+    "width": 451,
+    "height": 277
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«كل» DARK ExtraBold, #FCF0D6"
+  },
+  {
+   "order": 12,
+   "file": "12_embroidery_p5_word_shadow.png",
+   "name": "embroidery_p5_word_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1502,
+    "y": 738,
+    "width": 943,
+    "height": 351
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "contact shadow of the embroidered word «تفصيلة»"
+  },
+  {
+   "order": 13,
+   "file": "13_embroidery_p5_word.png",
+   "name": "embroidery_p5_word",
+   "type": "embroidery",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1534,
+    "y": 747,
+    "width": 872,
+    "height": 300
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/website_embroidery/render/POST_05",
+   "note": "«تفصيلة»: the website 3D embroidery render (6x panel), crimson thread"
+  },
+  {
+   "order": 14,
+   "file": "14_text_p5_dot.png",
+   "name": "text_p5_dot",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1468,
+    "y": 929,
+    "width": 55,
+    "height": 55
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«.» DARK ExtraBold, #C1121F"
+  },
+  {
+   "order": 15,
+   "file": "15_text_p5_sub.png",
+   "name": "text_p5_sub",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1770,
+    "y": 1107,
+    "width": 1153,
+    "height": 149
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«إنت تصمّم، وإحنا ننفّذ.» DARK ExtraBold, #FCF0D6"
+  },
+  {
+   "order": 16,
+   "file": "16_text_p5_bottom.png",
+   "name": "text_p5_bottom",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1597,
+    "y": 3767,
+    "width": 1326,
+    "height": 119
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«لونك، أحرفك، وتطريزك... على ذوقك.» DARK ExtraBold, #FCF0D6"
+  },
+  {
+   "order": 17,
+   "file": "17_patch_lifeexe_shadow.png",
+   "name": "patch_lifeexe_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 302,
+    "y": 524,
+    "width": 1009,
+    "height": 632
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "lifeexe patch: soft lift shadow + contact shadow"
+  },
+  {
+   "order": 18,
+   "file": "18_patch_lifeexe.png",
+   "name": "patch_lifeexe",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 329,
+    "y": 545,
+    "width": 933,
+    "height": 555
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/patches/baked/lifeexe_thread.png",
+   "note": "embroidered lifeexe patch (website embroidery render of the supplied artwork)"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 2.74,
+  "p99": 32.0,
+  "share_px_diff_over_16": 0.0236
+ }
+}

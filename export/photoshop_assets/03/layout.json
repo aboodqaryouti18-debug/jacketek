@@ -1,0 +1,313 @@
+{
+ "post": "03",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_design.png",
+   "name": "shadow_design",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 118,
+    "y": 0,
+    "width": 3000,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the design's own soft shadows under stickers, prints and type (from the approved post)"
+  },
+  {
+   "order": 2,
+   "file": "02_text_tafseela_01.png",
+   "name": "text_tafseela_01",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2113,
+    "y": 269,
+    "width": 820,
+    "height": 82
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«تفصيلة 01 – حرف F مطرز» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #93A5A6"
+  },
+  {
+   "order": 3,
+   "file": "03_sticker_thanks_chatgpt.png",
+   "name": "sticker_thanks_chatgpt",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 145,
+    "y": 600,
+    "width": 460,
+    "height": 373
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "THANKS CHATGPT I MADE IT sticker"
+  },
+  {
+   "order": 4,
+   "file": "04_embroidery_tasmeemak.png",
+   "name": "embroidery_tasmeemak",
+   "type": "embroidery",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1146,
+    "y": 2592,
+    "width": 1380,
+    "height": 331
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "تصميمك. (red embroidered lettering)"
+  },
+  {
+   "order": 5,
+   "file": "05_text_min.png",
+   "name": "text_min",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2587,
+    "y": 2675,
+    "width": 348,
+    "height": 227
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«من» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #EEE6CD"
+  },
+  {
+   "order": 6,
+   "file": "06_sticker_among_us.png",
+   "name": "sticker_among_us",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 241,
+    "y": 2961,
+    "width": 607,
+    "height": 457
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "Among Us laptop sticker"
+  },
+  {
+   "order": 7,
+   "file": "07_text_wayaeesh_wayak.png",
+   "name": "text_wayaeesh_wayak",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1042,
+    "y": 3037,
+    "width": 1706,
+    "height": 378
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«ويعيش وياك.» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #EEE5CD"
+  },
+  {
+   "order": 8,
+   "file": "08_decor_red_dashes.png",
+   "name": "decor_red_dashes",
+   "type": "decor",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1036,
+    "y": 3459,
+    "width": 1718,
+    "height": 36
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "red dashed underline"
+  },
+  {
+   "order": 9,
+   "file": "09_fragment_138_299.png",
+   "name": "fragment_138_299",
+   "type": "artwork",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 713,
+    "y": 1349,
+    "width": 31,
+    "height": 30
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "small fragment in the approved post (e.g. a leftover guide-dash stub or a panel-edge sliver from the source), kept so the post stays identical; delete freely"
+  },
+  {
+   "order": 10,
+   "file": "10_fragment_0_783.png",
+   "name": "fragment_0_783",
+   "type": "artwork",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 98,
+    "y": 3547,
+    "width": 12,
+    "height": 53
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "small fragment in the approved post (e.g. a leftover guide-dash stub or a panel-edge sliver from the source), kept so the post stays identical; delete freely"
+  },
+  {
+   "order": 11,
+   "file": "11_patch_JK_shadow.png",
+   "name": "patch_JK_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 596,
+    "y": 452,
+    "width": 2178,
+    "height": 2175
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "soft contact shadow of the JK patch (light from the top left)"
+  },
+  {
+   "order": 12,
+   "file": "12_patch_JK.png",
+   "name": "patch_JK",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 621,
+    "y": 471,
+    "width": 2109,
+    "height": 2106
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/jk_patch_post03.webp (2000 x 1778)",
+   "note": "JK felt patch, square crop of the supplied photo on the approved quad"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 3.18,
+  "p99": 42.0,
+  "share_px_diff_over_16": 0.0304
+ }
+}

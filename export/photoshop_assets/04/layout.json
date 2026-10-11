@@ -1,0 +1,379 @@
+{
+ "post": "04",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_prints_on_background.png",
+   "name": "shadow_prints_on_background",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 150,
+    "y": 929,
+    "width": 2978,
+    "height": 2846
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the prints' soft drop + contact shadow on the background (black, normal blend)"
+  },
+  {
+   "order": 2,
+   "file": "02_frame_big.png",
+   "name": "frame_big",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 249,
+    "y": 1015,
+    "width": 2728,
+    "height": 1738
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 3,
+   "file": "03_photo_big.png",
+   "name": "photo_big",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 306,
+    "y": 1062,
+    "width": 2669,
+    "height": 1590
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/back_l.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 4,
+   "file": "04_shadow_small_on_prints_below.png",
+   "name": "shadow_small_on_prints_below",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1811,
+    "y": 2511,
+    "width": 1092,
+    "height": 199
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the small print's shadow where it lies on the prints under it"
+  },
+  {
+   "order": 5,
+   "file": "05_frame_small.png",
+   "name": "frame_small",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1895,
+    "y": 2590,
+    "width": 1083,
+    "height": 1024
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 6,
+   "file": "06_photo_small.png",
+   "name": "photo_small",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1938,
+    "y": 2607,
+    "width": 992,
+    "height": 907
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/hand_spider.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 7,
+   "file": "07_text_p4_l1.png",
+   "name": "text_p4_l1",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1142,
+    "y": 453,
+    "width": 1764,
+    "height": 297
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«مو بس جاكيت...» DARK ExtraBold, #003049"
+  },
+  {
+   "order": 8,
+   "file": "08_text_p4_hay.png",
+   "name": "text_p4_hay",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2313,
+    "y": 3375,
+    "width": 595,
+    "height": 398
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«هاي» DARK ExtraBold, #003049"
+  },
+  {
+   "order": 9,
+   "file": "09_embroidery_p4_word_shadow.png",
+   "name": "embroidery_p4_word_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 839,
+    "y": 3363,
+    "width": 1448,
+    "height": 473
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "contact shadow of the embroidered word «ذكرياتك»"
+  },
+  {
+   "order": 10,
+   "file": "10_embroidery_p4_word.png",
+   "name": "embroidery_p4_word",
+   "type": "embroidery",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 878,
+    "y": 3375,
+    "width": 1356,
+    "height": 407
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/website_embroidery/render/POST_04",
+   "note": "«ذكرياتك»: the website 3D embroidery render (6x panel), crimson thread"
+  },
+  {
+   "order": 11,
+   "file": "11_text_p4_dot.png",
+   "name": "text_p4_dot",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 796,
+    "y": 3625,
+    "width": 74,
+    "height": 73
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«.» DARK ExtraBold, #C1121F"
+  },
+  {
+   "order": 12,
+   "file": "12_patch_whocares_shadow.png",
+   "name": "patch_whocares_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 294,
+    "y": 2450,
+    "width": 670,
+    "height": 671
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "whocares patch: soft lift shadow + contact shadow"
+  },
+  {
+   "order": 13,
+   "file": "13_patch_whocares.png",
+   "name": "patch_whocares",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 318,
+    "y": 2466,
+    "width": 600,
+    "height": 602
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/patches/baked/whocares_thread.png",
+   "note": "embroidered whocares patch (website embroidery render of the supplied artwork)"
+  },
+  {
+   "order": 14,
+   "file": "14_patch_porsche_shadow.png",
+   "name": "patch_porsche_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 174,
+    "y": 910,
+    "width": 526,
+    "height": 296
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "porsche patch: soft lift shadow + contact shadow"
+  },
+  {
+   "order": 15,
+   "file": "15_patch_porsche.png",
+   "name": "patch_porsche",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 196,
+    "y": 927,
+    "width": 460,
+    "height": 229
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/patches/baked/porsche_thread.png",
+   "note": "embroidered porsche patch (website embroidery render of the supplied artwork)"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 3.47,
+  "p99": 61.0,
+  "share_px_diff_over_16": 0.0271
+ }
+}

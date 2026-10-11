@@ -1,0 +1,107 @@
+{
+ "01_top_to_02": {
+  "period": 32.5,
+  "duty": 0.8,
+  "phase": 18.5,
+  "contrast": 66.75167846679688,
+  "width": 4.75
+ },
+ "02_03_loop_F": {
+  "period": 34.0,
+  "duty": 0.8,
+  "phase": 28.0,
+  "contrast": 35.769256591796875,
+  "width": 4.75
+ },
+ "03_F_to_edge": {
+  "period": 38.25,
+  "duty": 0.8,
+  "phase": 24.0,
+  "contrast": 45.60234069824219,
+  "width": 4.75
+ },
+ "01_big_curve": {
+  "period": 40.0,
+  "duty": 0.8,
+  "phase": 11.5,
+  "contrast": 44.681480407714844,
+  "width": 4.75
+ },
+ "02_03_06_low": {
+  "period": 37.25,
+  "duty": 0.8,
+  "phase": 2.0,
+  "contrast": 49.78571319580078,
+  "width": 4.75
+ },
+ "06_05_mid": {
+  "period": 34.75,
+  "duty": 0.8,
+  "phase": 21.0,
+  "contrast": 74.67186737060547,
+  "width": 4.75
+ },
+ "05_top_curve": {
+  "period": 36.5,
+  "duty": 0.8,
+  "phase": 33.5,
+  "contrast": 46.833961486816406,
+  "width": 4.75
+ },
+ "05_life_to_04": {
+  "period": 37.5,
+  "duty": 0.8,
+  "phase": 5.5,
+  "contrast": 47.858253479003906,
+  "width": 4.75
+ },
+ "04_top_curve": {
+  "period": 39.25,
+  "duty": 0.8,
+  "phase": 16.0,
+  "contrast": 51.915313720703125,
+  "width": 4.75
+ },
+ "04_left_a": {
+  "period": 32.0,
+  "duty": 0.8,
+  "phase": 31.0,
+  "contrast": 45.92854309082031,
+  "width": 4.75
+ },
+ "04_left_clock": {
+  "period": 32.0,
+  "duty": 0.8,
+  "phase": 26.5,
+  "contrast": 59.69585037231445,
+  "width": 5.0
+ },
+ "04_clock_right": {
+  "period": 37.0,
+  "duty": 0.8,
+  "phase": 20.5,
+  "contrast": 33.917179107666016,
+  "width": 4.75
+ },
+ "04_05_bottom": {
+  "period": 38.5,
+  "duty": 0.8,
+  "phase": 38.0,
+  "contrast": 70.55367279052734,
+  "width": 4.75
+ },
+ "05_06_bmo": {
+  "period": 32.0,
+  "duty": 0.8,
+  "phase": 21.0,
+  "contrast": 65.17189025878906,
+  "width": 4.75
+ },
+ "06_bmo_right": {
+  "period": 32.5,
+  "duty": 0.8,
+  "phase": 29.0,
+  "contrast": 30.302032470703125,
+  "width": 4.75
+ }
+}

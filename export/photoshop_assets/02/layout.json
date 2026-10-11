@@ -1,0 +1,203 @@
+{
+ "post": "02",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_design.png",
+   "name": "shadow_design",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 120,
+    "y": 0,
+    "width": 2995,
+    "height": 4049
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the design's own soft shadows under stickers, prints and type (from the approved post)"
+  },
+  {
+   "order": 2,
+   "file": "02_polaroid_big.png",
+   "name": "polaroid_big",
+   "type": "print",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 197,
+    "y": 237,
+    "width": 2802,
+    "height": 2163
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "big polaroid: frame + group photo (flattened in the source)"
+  },
+  {
+   "order": 3,
+   "file": "03_polaroid_left.png",
+   "name": "polaroid_left",
+   "type": "print",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 209,
+    "y": 1990,
+    "width": 1173,
+    "height": 1771
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "left polaroid: frame + sleeve photo (flattened in the source)"
+  },
+  {
+   "order": 4,
+   "file": "04_polaroid_right.png",
+   "name": "polaroid_right",
+   "type": "print",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1451,
+    "y": 2194,
+    "width": 1555,
+    "height": 1191
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "right polaroid: frame + sleeve photo (flattened in the source)"
+  },
+  {
+   "order": 5,
+   "file": "05_sticker_uno_reverse.png",
+   "name": "sticker_uno_reverse",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2564,
+    "y": 348,
+    "width": 428,
+    "height": 564
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "UNO reverse card sticker"
+  },
+  {
+   "order": 6,
+   "file": "06_sticker_everything_under_ctrl.png",
+   "name": "sticker_everything_under_ctrl",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 201,
+    "y": 240,
+    "width": 584,
+    "height": 672
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "EVERYTHING IS UNDER Ctrl sticker"
+  },
+  {
+   "order": 7,
+   "file": "07_text_jacketek.png",
+   "name": "text_jacketek",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1312,
+    "y": 3788,
+    "width": 612,
+    "height": 82
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«JACKETEK» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #123749"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 4.63,
+  "p99": 42.0,
+  "share_px_diff_over_16": 0.0604
+ }
+}

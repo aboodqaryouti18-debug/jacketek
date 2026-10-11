@@ -1,0 +1,401 @@
+{
+ "post": "06",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_prints_on_background.png",
+   "name": "shadow_prints_on_background",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 138,
+    "y": 280,
+    "width": 2922,
+    "height": 2994
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the prints' soft drop + contact shadow on the background (black, normal blend)"
+  },
+  {
+   "order": 2,
+   "file": "02_frame_number.png",
+   "name": "frame_number",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 233,
+    "y": 1420,
+    "width": 1131,
+    "height": 1694
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 3,
+   "file": "03_photo_number.png",
+   "name": "photo_number",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 280,
+    "y": 1475,
+    "width": 1045,
+    "height": 1519
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/09_l.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 4,
+   "file": "04_shadow_chest_on_prints_below.png",
+   "name": "shadow_chest_on_prints_below",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 383,
+    "y": 1420,
+    "width": 981,
+    "height": 272
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the chest print's shadow where it lies on the prints under it"
+  },
+  {
+   "order": 5,
+   "file": "05_frame_chest.png",
+   "name": "frame_chest",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 423,
+    "y": 366,
+    "width": 2486,
+    "height": 1230
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 6,
+   "file": "06_photo_chest.png",
+   "name": "photo_chest",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 478,
+    "y": 413,
+    "width": 2384,
+    "height": 1027
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/chest_l.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 7,
+   "file": "07_frame_collar.png",
+   "name": "frame_collar",
+   "type": "frame",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1501,
+    "y": 1761,
+    "width": 1323,
+    "height": 792
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "vector quad, work/rebuild/frames.json",
+   "note": "polaroid / card frame (white #FFFDF5)"
+  },
+  {
+   "order": 8,
+   "file": "08_photo_collar.png",
+   "name": "photo_collar",
+   "type": "photo",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1536,
+    "y": 1797,
+    "width": 1243,
+    "height": 636
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/new_photos_l/full_jacket_l.webp",
+   "note": "the jacket photo, cover-fitted in the frame window"
+  },
+  {
+   "order": 9,
+   "file": "09_text_p6_l1.png",
+   "name": "text_p6_l1",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1245,
+    "y": 2976,
+    "width": 1675,
+    "height": 365
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«كل تفصيلة» DARK ExtraBold, #003049"
+  },
+  {
+   "order": 10,
+   "file": "10_text_p6_ilha.png",
+   "name": "text_p6_ilha",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2529,
+    "y": 3454,
+    "width": 391,
+    "height": 360
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "DARK-ExtraBold.ttf (jacketportable/public/assets/fonts/dark), browser-shaped",
+   "note": "«إلها» DARK ExtraBold, #003049"
+  },
+  {
+   "order": 11,
+   "file": "11_embroidery_p6_word_shadow.png",
+   "name": "embroidery_p6_word_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1747,
+    "y": 3484,
+    "width": 739,
+    "height": 348
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "contact shadow of the embroidered word «معنى»"
+  },
+  {
+   "order": 12,
+   "file": "12_embroidery_p6_word.png",
+   "name": "embroidery_p6_word",
+   "type": "embroidery",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1790,
+    "y": 3500,
+    "width": 644,
+    "height": 273
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/website_embroidery/render/POST_06",
+   "note": "«معنى»: the website 3D embroidery render (6x panel), crimson thread"
+  },
+  {
+   "order": 13,
+   "file": "13_patch_cat_shadow.png",
+   "name": "patch_cat_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 705,
+    "y": 116,
+    "width": 612,
+    "height": 392
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "cat patch: soft lift shadow + contact shadow"
+  },
+  {
+   "order": 14,
+   "file": "14_patch_cat.png",
+   "name": "patch_cat",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 729,
+    "y": 132,
+    "width": 543,
+    "height": 323
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/patches/baked/cat_thread.png",
+   "note": "embroidered cat patch (website embroidery render of the supplied artwork)"
+  },
+  {
+   "order": 15,
+   "file": "15_patch_bmo_shadow.png",
+   "name": "patch_bmo_shadow",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 307,
+    "y": 3232,
+    "width": 709,
+    "height": 645
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "bmo patch: soft lift shadow + contact shadow"
+  },
+  {
+   "order": 16,
+   "file": "16_patch_bmo.png",
+   "name": "patch_bmo",
+   "type": "patch",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 331,
+    "y": 3249,
+    "width": 639,
+    "height": 575
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "work/patches/baked/bmo_thread.png",
+   "note": "embroidered bmo patch (website embroidery render of the supplied artwork)"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 3.6,
+  "p99": 57.0,
+  "share_px_diff_over_16": 0.0298
+ }
+}

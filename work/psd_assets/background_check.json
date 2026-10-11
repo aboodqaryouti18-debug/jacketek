@@ -1,0 +1,32 @@
+{
+ "POST_01": {
+  "dots": 185,
+  "mean_abs_diff": 3.22,
+  "p95": 7.5
+ },
+ "POST_02": {
+  "dots": 160,
+  "mean_abs_diff": 3.82,
+  "p95": 13.8
+ },
+ "POST_03": {
+  "dots": 215,
+  "mean_abs_diff": 3.36,
+  "p95": 7.9
+ },
+ "POST_04": {
+  "dots": 145,
+  "mean_abs_diff": 4.0,
+  "p95": 11.6
+ },
+ "POST_05": {
+  "dots": 117,
+  "mean_abs_diff": 3.45,
+  "p95": 7.6
+ },
+ "POST_06": {
+  "dots": 163,
+  "mean_abs_diff": 4.56,
+  "p95": 14.3
+ }
+}

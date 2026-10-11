@@ -1,0 +1,38 @@
+{
+ "01": {
+  "layers": 11,
+  "mean_abs_diff": 5.1,
+  "p99": 54.0,
+  "share_px_diff_over_16": 0.0577
+ },
+ "02": {
+  "layers": 8,
+  "mean_abs_diff": 4.63,
+  "p99": 42.0,
+  "share_px_diff_over_16": 0.0604
+ },
+ "03": {
+  "layers": 13,
+  "mean_abs_diff": 3.18,
+  "p99": 42.0,
+  "share_px_diff_over_16": 0.0304
+ },
+ "04": {
+  "layers": 16,
+  "mean_abs_diff": 3.47,
+  "p99": 61.0,
+  "share_px_diff_over_16": 0.0271
+ },
+ "05": {
+  "layers": 19,
+  "mean_abs_diff": 2.74,
+  "p99": 32.0,
+  "share_px_diff_over_16": 0.0236
+ },
+ "06": {
+  "layers": 17,
+  "mean_abs_diff": 3.6,
+  "p99": 57.0,
+  "share_px_diff_over_16": 0.0298
+ }
+}

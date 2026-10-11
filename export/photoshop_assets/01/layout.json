@@ -1,0 +1,269 @@
+{
+ "post": "01",
+ "canvas": {
+  "width": 3240,
+  "height": 4050,
+  "unit": "px",
+  "dpi": 72,
+  "colour": "sRGB 8-bit"
+ },
+ "final_size": {
+  "width": 1080,
+  "height": 1350,
+  "how": "Image > Image Size: 33.333%, Bicubic Sharper off / Automatic"
+ },
+ "import_rule": "File > Place Embedded each PNG in order, position X=0 Y=0, scale 100% (all layers are full-canvas)",
+ "layers": [
+  {
+   "order": 0,
+   "file": "00_background.png",
+   "name": "background",
+   "type": "background",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 3240,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/background_supplied.jpg (surface colour), dots + thread measured on it",
+   "note": "navy / beige surface + every visible dot + the thread, rebuilt as vectors at 3x (tools/psd_assets/background_vector.py)"
+  },
+  {
+   "order": 1,
+   "file": "01_shadow_design.png",
+   "name": "shadow_design",
+   "type": "shadow",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 118,
+    "y": 0,
+    "width": 3000,
+    "height": 4050
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "",
+   "note": "the design's own soft shadows under stickers, prints and type (from the approved post)"
+  },
+  {
+   "order": 2,
+   "file": "02_headline_jaketak.png",
+   "name": "headline_jaketak",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 556,
+    "y": 442,
+    "width": 2380,
+    "height": 578
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«جاكيتك» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #EFE6CD"
+  },
+  {
+   "order": 3,
+   "file": "03_headline_hachaytak_embroidery.png",
+   "name": "headline_hachaytak_embroidery",
+   "type": "embroidery",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 267,
+    "y": 1056,
+    "width": 2490,
+    "height": 899
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "حچايتك. (red embroidered lettering)"
+  },
+  {
+   "order": 4,
+   "file": "04_sticker_error_windows.png",
+   "name": "sticker_error_windows",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2299,
+    "y": 1996,
+    "width": 698,
+    "height": 638
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "Error windows sticker"
+  },
+  {
+   "order": 5,
+   "file": "05_sticker_idk_chatgpt.png",
+   "name": "sticker_idk_chatgpt",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 497,
+    "y": 2257,
+    "width": 775,
+    "height": 376
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "idk, ChatGPT it. sticker"
+  },
+  {
+   "order": 6,
+   "file": "06_sticker_too_many_tabs.png",
+   "name": "sticker_too_many_tabs",
+   "type": "sticker",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 273,
+    "y": 3035,
+    "width": 801,
+    "height": 801
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "Too many brain tabs open! sticker"
+  },
+  {
+   "order": 7,
+   "file": "07_text_001.png",
+   "name": "text_001",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 2328,
+    "y": 2978,
+    "width": 585,
+    "height": 94
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«[ 001 – أول نزلة ]» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #728B8F"
+  },
+  {
+   "order": 8,
+   "file": "08_text_line1.png",
+   "name": "text_line1",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1941,
+    "y": 3165,
+    "width": 981,
+    "height": 142
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«اسمك. رقمك. باجاتك.» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #D0D7C9"
+  },
+  {
+   "order": 9,
+   "file": "09_text_line2.png",
+   "name": "text_line2",
+   "type": "text",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 1339,
+    "y": 3377,
+    "width": 1591,
+    "height": 131
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "«جاكيت واحد يتفصّل على كيفك.» lettering as in the approved post (its own pixels: shading + texture kept); clean vector outline in text.svg, colour #DEE4D0"
+  },
+  {
+   "order": 10,
+   "file": "10_fragment_663_519.png",
+   "name": "fragment_663_519",
+   "type": "artwork",
+   "blend": "normal",
+   "opacity": 100,
+   "x": 0,
+   "y": 0,
+   "width": 3240,
+   "height": 4050,
+   "content_bbox": {
+    "x": 3110,
+    "y": 2354,
+    "width": 26,
+    "height": 32
+   },
+   "rotation_deg": 0,
+   "scale": 1.0,
+   "source": "source/embroidery_reference_posts01-03.webp (the only source: 667 x 888 px for this post, enlarged 4.56x)",
+   "note": "small fragment in the approved post (e.g. a leftover guide-dash stub or a panel-edge sliver from the source), kept so the post stays identical; delete freely"
+  }
+ ],
+ "svg": [
+  "text.svg",
+  "background_dots_thread.svg"
+ ],
+ "check_vs_approved": {
+  "mean_abs_diff": 5.1,
+  "p99": 54.0,
+  "share_px_diff_over_16": 0.0577
+ }
+}
