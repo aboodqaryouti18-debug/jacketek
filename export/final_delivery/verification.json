@@ -1,0 +1,38 @@
+{
+ "01": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 11
+ },
+ "02": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 8
+ },
+ "03": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 13
+ },
+ "04": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 16
+ },
+ "05": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 19
+ },
+ "06": {
+  "master_vs_approved_reconstruction_max_diff": 0,
+  "instagram_vs_approved_reconstruction_max_diff": 0,
+  "layers": 17
+ },
+ "zip": {
+  "file": "jacketek_final_delivery.zip",
+  "entries": 14,
+  "png_decoded": 12,
+  "size_mb": 54.6
+ }
+}
