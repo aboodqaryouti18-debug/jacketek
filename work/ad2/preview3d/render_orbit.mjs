@@ -6,7 +6,7 @@
 // (SwiftShader) and encoded locally with ffmpeg.
 import { createServer } from "vite";
 import { chromium } from "playwright-core";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 
 const out = process.argv[2] || "out";
@@ -30,6 +30,8 @@ await page.goto("http://127.0.0.1:5299/", { waitUntil: "networkidle", timeout: 1
 await page.waitForFunction(() => window.previewReady === true, null, { timeout: 180000 });
 
 for (let i = 0; i < N; i++) {
+  const file = `${out}/frames/f_${String(i).padStart(4, "0")}.png`;
+  if (existsSync(file)) continue;          // resume: frames already rendered are kept
   const u = i / (N - 1);
   const shot = {
     yawDeg: -20 + 220 * ease(u),        // front → side → back
@@ -40,7 +42,7 @@ for (let i = 0; i < N; i++) {
     thread: 0.08 + 0.92 * u,            // thread leads around the jacket
   };
   await page.evaluate((s) => window.setShot(s), shot);
-  writeFileSync(`${out}/frames/f_${String(i).padStart(4, "0")}.png`, await page.locator("canvas").screenshot());
+  writeFileSync(file, await page.locator("canvas").screenshot());
   if (i % 24 === 0) console.log(`frame ${i}/${N}`);
 }
 console.log("hosts contacted:", [...hosts].join(", "));
