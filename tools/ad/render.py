@@ -640,7 +640,7 @@ def build(args):
     class _Still:
         def get(self, lt, dur):
             u = ease_io(clamp(lt / dur))
-            return still_zoom(chest, lerp(1.0, 1.1, u), cx=lerp(0.47, 0.53, u), cy=0.47)
+            return still_zoom(chest, lerp(1.0, 1.1, u), cx=lerp(0.5, 0.53, u), cy=lerp(0.5, 0.47, u))
     c4 = _Still()
     p4 = smooth_path([(-30, 796), (90, 900), (160, 1110), (420, 1140), (760, 1150), (960, 1190), (1120, 1240)])
     shots.append(Shot(14.0, 17.4, lambda lt: c4.get(lt, 3.4),
