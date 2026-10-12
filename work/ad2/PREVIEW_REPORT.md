@@ -71,7 +71,13 @@ Findings:
   against the beige and the white sleeves.
 - **Thread realism: too clean.** A perfectly smooth geometric spiral reads as a drawn line: no sag, no slight wobble, no visible
   twist, no thickness variation.
-- **Lighting during the orbit:** the back views are lit more flatly than the front (the key light is fixed to the studio).
+- **Thread timing: wrong in the second half.** By the time the camera reaches the back (~8.5–12 s), the visible stretch of
+  thread has spiralled down and mostly behind the jacket. Only small fragments show at the sides, so the thread "leaves"
+  exactly when the back is revealed. The path and window must be timed to the camera, e.g. head always slightly ahead
+  of the camera's view direction and at chest height.
+- **Lighting during the orbit:** the back views are lit more flatly and darker than the front (the key light is fixed to the
+  studio).
+- Preview: 288 frames, 540×960, 24 fps, 12.0 s; decodes cleanly; the only host contacted was `127.0.0.1:5299`.
 
 ## Problems to fix before the full advertisement
 
@@ -84,7 +90,7 @@ Findings:
    - find the source used for the reference photos (the `.blend` named in `assets.ts`, `Fidelio_Varsity_RealisticFit_v09.blend`,
      is not in this repo);
    - later and paid: an AI realism pass on short segments, only with your approval.
-3. **Thread look:** add a gentle sag/wobble and a subtle twist normal, slightly brighter burgundy or rim light so it reads on the
+3. **Thread look and timing:** keep the thread's head ahead of the camera and at chest height through the back reveal; add a gentle sag/wobble and a subtle twist normal, slightly brighter burgundy or rim light so it reads on the
    burgundy body, and route it so it crosses the sleeves and background more than the body.
 4. **Lighting:** a light rig that moves with the orbit, or a stronger rim/back light, so the back stays as attractive as the front.
 5. **Render speed:** software WebGL takes ~4–5 s per 540×960 frame here; a 40 s 1080×1920 film would take hours locally.
