@@ -26,9 +26,10 @@ for d in "${D[@]}"; do
   i=$((i+1))
 done
 
+DLIST=$(IFS=,; echo "${D[*]}")
 chain="" ; last="v0" ; acc=0
 for k in 1 2 3 4 5 6; do
-  acc=$(python3 -c "print(sum([${D[*]// /,}][:$k]) - $k*$X)")
+  acc=$(python3 -c "print(round(sum([$DLIST][:$k]) - $k*$X, 3))")
   chain+="[$last][v$k]xfade=transition=fade:duration=$X:offset=$acc[x$k];"
   last="x$k"
 done
