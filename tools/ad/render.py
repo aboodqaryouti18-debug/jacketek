@@ -633,7 +633,15 @@ def build(args):
                       captions=[Caption(COPY[1], 0.9, 5.0, 170), Caption(COPY[2], 6.0, 10.0, 1560)]))
 
     # ---- S4 14.0-17.4 chest embroidery -----------------------------------------
-    c4 = clip("c2.mp4", 0, "work/reel/frames/s2_chest.png", speed=0.7)
+    # real chest photo with a slow virtual push/slide (the Kling chest clip
+    # picks up a blue rim light, outside the brand palette)
+    chest = Image.open(ROOT / "work/reel/frames/s2_chest.png").convert("RGB")
+
+    class _Still:
+        def get(self, lt, dur):
+            u = ease_io(clamp(lt / dur))
+            return still_zoom(chest, lerp(1.0, 1.1, u), cx=lerp(0.47, 0.53, u), cy=0.47)
+    c4 = _Still()
     p4 = smooth_path([(-30, 796), (90, 900), (160, 1110), (420, 1140), (760, 1150), (960, 1190), (1120, 1240)])
     shots.append(Shot(14.0, 17.4, lambda lt: c4.get(lt, 3.4),
                       strokes=lambda lt: [(p4, ease_io(ramp(lt, 2.0, 3.3)), ease_io(ramp(lt, -0.25, 3.15)), False, 7, 1.0)],
