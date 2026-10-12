@@ -598,7 +598,7 @@ def build(args):
         cw, ch = W / z, H / z
         return np.array(im.transform((W, H), Image.Transform.EXTENT,
                                      ((cx - cw / 2) * 2, (cy - ch / 2) * 2, (cx + cw / 2) * 2, (cy + ch / 2) * 2),
-                                     Image.BICUBIC))
+                                     Image.BICUBIC, fillcolor=(0xEE, 0xDC, 0xB8)))
 
     def canvas_strokes(lt):
         cam = cam_at(lt)
@@ -633,7 +633,7 @@ def build(args):
                       captions=[Caption(COPY[1], 0.9, 5.0, 170), Caption(COPY[2], 6.0, 10.0, 1560)]))
 
     # ---- S4 14.0-17.4 chest embroidery -----------------------------------------
-    c4 = clip("c2.mp4", 0, "work/reel/frames/s2_chest.png")
+    c4 = clip("c2.mp4", 0, "work/reel/frames/s2_chest.png", speed=0.7)
     p4 = smooth_path([(-30, 796), (90, 900), (160, 1110), (420, 1140), (760, 1150), (960, 1190), (1120, 1240)])
     shots.append(Shot(14.0, 17.4, lambda lt: c4.get(lt, 3.4),
                       strokes=lambda lt: [(p4, ease_io(ramp(lt, 2.0, 3.3)), ease_io(ramp(lt, -0.25, 3.15)), False, 7, 1.0)],
@@ -702,7 +702,8 @@ def build(args):
                       strokes=lambda lt: [(p8, ease_io(ramp(lt, 2.6, 3.9)), ease_io(ramp(lt, -0.3, 3.6)), False, 7, 1.0)],
                       captions=[Caption(COPY[7], 0.7, 5.6, 1660)]))
     p8b = smooth_path([(-30, 700), (200, 620), (500, 600), (800, 640), (1120, 980)])
-    shots.append(Shot(35.4, 37.4, back_pan,
+    c6b = clip("c6.mp4", 2.0, "work/reel/frames/s4_back.png")
+    shots.append(Shot(35.4, 37.4, lambda lt: c6b.get(lt, 2.0),
                       strokes=lambda lt: [(p8b, ease_io(ramp(lt, 1.2, 2.1)), ease_io(ramp(lt, -0.25, 1.9)), False, 7, 1.0)]))
 
     # ---- S9 37.4-44.0 the thread embroiders the logo -----------------------------
