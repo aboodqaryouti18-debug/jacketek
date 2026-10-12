@@ -349,7 +349,8 @@ class Caption:
         out = ease_io(ramp(t, self.t1, self.t1 + 0.35))
         ox, oy = offset
         if self.label:
-            d = ImageDraw.Draw(img)
+            lab = Image.new("RGBA", img.size, (0, 0, 0, 0))
+            d = ImageDraw.Draw(lab)
             for x0, x1, top, bot, first in self.lines:
                 u = ease_io(ramp(t, self.t0 - 0.25 + first * 0.07, self.t0 + 0.2 + first * 0.07))
                 if u <= 0:
@@ -359,6 +360,7 @@ class Caption:
                 left = right - (x1 - x0 + 2 * padx) * u
                 a = int(235 * (1 - out))
                 d.rounded_rectangle((left + ox, top - pady + oy, right + ox, bot + pady + oy), 18, fill=BEIGE + (a,))
+            img.alpha_composite(lab)
         for im, x, y, o in self.items:
             u = ease_out(ramp(t, self.t0 + o * 0.07, self.t0 + o * 0.07 + 0.42))
             a = u * (1 - out)
