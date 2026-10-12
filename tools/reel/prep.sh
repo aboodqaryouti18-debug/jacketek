@@ -14,7 +14,7 @@ ffmpeg -y -hide_banner -loglevel error -loop 1 -i s2_sleeve.png -t 5 -filter_com
   "scale=2160:3840,zoompan=z='1+0.08*on/120':x='iw*0.63-iw/zoom*0.63':y='ih*0.5-ih/zoom/2':d=120:s=2160x3840:fps=24,scale=1080:1920:flags=lanczos,format=yuv420p" \
   -c:v libx264 -crf 14 -preset slow c3.mp4
 
-ffmpeg -y -hide_banner -loglevel error -i c7_kling.mp4 -t 2.5 -vf "reverse,fps=24,format=yuv420p" -an \
+ffmpeg -y -hide_banner -loglevel error -t 2.5 -i c7_kling.mp4 -vf "reverse,fps=24,format=yuv420p" -an \
   -c:v libx264 -crf 14 -preset slow hero_a.mp4
 ffmpeg -y -hide_banner -loglevel error -loop 1 -i s4_hero.png -t 1.5 -filter_complex \
   "scale=2160:3840,zoompan=z='1+0.012*on/36':x='iw/2-iw/zoom/2':y='ih/2-ih/zoom/2':d=36:s=2160x3840:fps=24,scale=1080:1920:flags=lanczos,format=yuv420p" \
